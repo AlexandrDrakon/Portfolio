@@ -1,0 +1,134 @@
+.about{
+  @extend %clearfix;
+}
+
+.about__left {
+  float: left;
+  margin-left: 7.6389%; //55px;
+  width: 31.9444%; //230px;
+
+  @include laptop {
+    margin-left: 3.6986%; //27px;
+    width: 23.9726%; //175px;
+  }
+
+  @include phones {
+    float: none;
+    width: 100%;
+    margin-left: 25%;
+  }
+}
+
+.about__right {
+  float: left;
+  margin-left: 7.6389%; //55px;
+  width: 52.7778%; //380px;
+
+  @include laptop {
+    margin-left: 6.4384%; //47px;
+    width: 57.1233%; //417px;
+  }
+
+  @include phones {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.about__pic{
+  @include border-radius(50%);
+  overflow: hidden;
+  border: 5px solid #fff;
+  width: 95.6522%; //220px;
+  height: 95.6522%; //220px;
+
+  @include laptop {
+    width: 94.2857%; //165px;
+    height: 94.2857%; //165px;
+  }
+
+  @include phones {
+    width: 46.6667%; //140px;
+    height: 46.6667%; //140px;
+  }
+}
+
+.about__pic_img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about__title {
+  @include font(medium);
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 16px;
+  @include phones {
+    text-align: center;
+    margin: 10px 0 4px;
+  }
+}
+
+.about__desc {
+  height: 300px;
+  overflow-y : scroll;
+  @include font(light);
+  font-size: 18px;
+  line-height: 26px;
+  color: $grey;
+  margin-bottom: 43px;
+  p {
+    margin-top: 0;
+    margin-bottom: 7px;
+  }
+
+  @include laptop {
+    height: 375px;
+  }
+
+  @include phones {
+    overflow-y: auto;
+    height: auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.about__btns{
+  text-align: right;
+  @include phones {
+    text-align: center;
+  }
+}
+
+.btn {
+  @include inlineblock();
+  height: 36px;
+  padding: 0 13px;
+  border: 2px solid $red;
+  @include border-radius(20px);
+  text-align: center;
+  @include font(sansbold);
+  font-size: 0px;
+  line-height: 36px;
+  color: $red;
+  text-decoration: none;
+  i, span {
+    font-size: 14px;
+  }
+  span {
+    padding-left: 9px;
+  }
+  &:hover {
+    background: $red;
+    color: $white;
+  }
+
+  @include phones {
+    float: none;
+    margin: 0 auto;
+  }
+}

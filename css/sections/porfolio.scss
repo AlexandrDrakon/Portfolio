@@ -1,0 +1,124 @@
+.potfolio {
+  margin-left: 20px;
+  width: 700px;
+
+  @include laptop {
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+.portfolio__title {
+  margin-bottom: 20px;
+  @include font(medium);
+  font-size: 35px;
+  line-height: 40px;
+
+  @include phones {
+    text-align: center;
+    padding-top: 14px;
+  }
+}
+
+.portfolio__desc {
+  font-size: 0;
+  margin: 0 -10px;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.portfolio__item {
+  text-decoration: none;
+  color: $black;
+  @include inlineblock(top);
+  overflow: hidden;
+  min-width: 200px;
+  width: 220px;
+  margin: 0 10px 20px;
+  @include border-radius(13px);
+  background-color: #fff;
+  @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
+  @include transition(box-shadow .3s);
+  &:hover {
+    @include box-shadow(0px 4px 8px 0px rgba(0, 0, 0, 0.2));
+    .portfolio__name {
+      color: $red;
+    }
+  }
+
+  @include laptop {
+    width: 228px;
+  }
+
+  @include phones {
+    width: 300px;
+  }
+}
+
+.portfolio__img {
+  width: 100%;
+}
+
+.portfolio__img_pic {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.potfolio__content {
+  padding: 18px 18px 12px 18px;
+}
+
+.portfolio__name {
+  @include font(regular);
+  font-size: 21px;
+  line-height: 24px;
+  color: $blue;
+  @include transition(color .3s);
+
+  @include phones {
+    font-size: 24px;
+  }
+}
+
+.portfolio__tit {
+  @include font(light);
+  font-size: 14px;
+  line-height: 21px;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.portfolio__type {
+  padding-top: 8px;
+  @include font(bold);
+  font-size: 14px;
+  line-height: 24px;
+  color: #aeaeae;
+
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.portfolio__type_mobile {
+  &:before {
+    content: '\f10b';
+    @include font(awesome);
+    font-size: 18px;
+    padding: 0 6px 0 2px;
+  }
+}
+
+.portfolio__type_desktop {
+  &:before {
+    content: '\f108';
+    @include font(awesome);
+    font-size: 18px;
+    padding: 0 6px 0 2px;
+  }
+}

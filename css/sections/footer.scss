@@ -1,0 +1,65 @@
+.footer {
+  background: $black;
+  color: #9c9c9c;
+  .container{
+    height: 100%;
+    @extend %clearfix;
+  }
+}
+
+.footer_left, .footer_right {
+  width: 50%;
+  height: 100%;
+  float: left;
+
+  @include phones {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+}
+
+.copyright {
+  padding-top: 15px;
+  @include font(ligth);
+  font-size: 14px;
+  line-height: 21px;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.socials {
+  height: 100%;
+  text-align: right;
+  font-size: 0;
+
+  @include phones {
+    text-align: center;
+  }
+}
+
+.socials__item {
+  @include inlineblock();
+  padding: 10px 0 10px 6px;
+
+  @include phones {
+    padding: 9px 2px 18px 4px;
+  }
+}
+
+.socials__link {
+  display: block;
+  height: 30px;
+  width: 32px;
+}
+
+@each $social in (vk, fb, tw) {
+  .socials__link_#{$social} {
+    background: url('../img/icons/#{$social}.png') 0 0 no-repeat;
+    &:hover {
+      background: url('../img/icons/#{$social}_hover.png') 0 0 no-repeat;
+    }
+  }
+}

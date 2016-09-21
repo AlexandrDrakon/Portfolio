@@ -1,0 +1,84 @@
+.content {
+  padding-top: 25px;
+  & .container {
+    @extend %clearfix;
+  }
+
+  @include phones {
+    padding-top: 10px;
+  }
+}
+
+.sidebar {
+  float: left;
+  width: 23.4043%; //220px;
+
+  @include laptop {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include phones {
+    margin-bottom: 19px;
+  }
+}
+
+.page-content {
+  float: left;
+  width: 76.5957%; //720px;
+
+  @include laptop {
+    float: none;
+    width: 100%;
+  }
+}
+
+.nav__list {
+  text-align: right;
+
+  @include laptop {
+    text-align: left;
+  }
+}
+
+.nav__item {
+  @include laptop {
+    @include inlineblock();
+  }
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: $black;
+  line-height: 24px;
+  padding: 11px 24px 9px 0;
+  border-right: 6px solid $white;
+  @include transition(color .3s);
+  &:hover {
+    color: $blue;
+  }
+  i {
+    padding-right: 10px;
+  }
+
+  @include laptop {
+    padding: 1px 22px 0 0;
+    border-right: none;
+  }
+
+  @include phones {
+    padding: 3px 9px 0 0px;
+    font-size: 14px;
+    i {
+      display: none;
+    }
+  }
+}
+
+.nav__item_active .nav__link{
+  @include font(bold);
+  color: $blue;
+  border-color: $blue;
+}
